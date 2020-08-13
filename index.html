@@ -11,19 +11,21 @@
     <script src="./command.js"></script>
     <script src="./sketch.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Source+Code+Pro&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Source+Code+Pro&display=swap');
         main {
             text-align: center;
             margin: auto 0;
         }
         
         h1 {
-            font-size: 20px;
+            font-size: 40px;
         }
         
         body {
+            background: url('./cool-background.png');
             padding: 10% 0;
             font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
         }
         
         #sketch-div {
@@ -36,7 +38,12 @@
         
         #code {
             font-family: 'Source Code Pro', monospace;
-            margin: 2em 0;
+            margin-bottom: 2em;
+        }
+        
+        #code:active,
+        #code:focus {
+            border: none;
         }
     </style>
 </head>
@@ -44,7 +51,7 @@
 <body>
     <main>
         <h1>This is a simple Logo Interpreter, type the code in the box to see the magic!</h1>
-        <textarea name="code" id="code" cols="47" rows="8">
+        <textarea name="code" id="code" cols="80" rows="8">
 repeat 36 [lt 10 pu fd 1 pd repeat 120 [fd 2 rt 3]]</textarea>
         <div id="sketch-div"></div>
     </main>
