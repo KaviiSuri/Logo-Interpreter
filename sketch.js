@@ -3,13 +3,14 @@ let turtle
 let show_token = false
 
 function setup() {
-    createCanvas(400, 400)
+    let canvas = createCanvas(400, 400)
+    canvas.parent('sketch-div')
     background(0)
     angleMode(DEGREES)
     turtle = new Turtle(200, 200, 0)
     editor = select('#code')
     goTurtle()
-    editor.input(goTurtle)
+    editor.changed(goTurtle)
 
 }
 
