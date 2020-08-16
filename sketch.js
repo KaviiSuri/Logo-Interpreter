@@ -10,7 +10,7 @@ function setup() {
     turtle = new Turtle(200, 200, 0)
     editor = select('#code')
     goTurtle()
-    editor.input(goTurtle)
+    editor.changed(goTurtle)
 
 }
 
